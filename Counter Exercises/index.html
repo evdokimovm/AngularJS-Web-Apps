@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	</head>
+	<body ng-app="MoveLogApp">
+		<div class="header">
+			<div class="container">
+				MOVE Log
+			</div>
+		</div>
+
+		<div class="main" ng-controller="MainController">
+			<div class="container">
+				<div ng-repeat="exercise in exercises" class="row">
+					<div class="col-xs-2"> <img ng-src="{{ exercise.icon }}"> </div>
+					<div class="col-xs-6">
+						<p>{{ exercise.name }}</p>
+					</div>
+					<div class="col-xs-4 counters"> <span ng-click="decrease($index)">-</span><span class="count">{{ exercise.count }}</span><span ng-click="increase($index)">+</span> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="container">
+			</div>
+		</div>
+
+	<script src="app.js"></script>
+
+	</body>
+</html>
