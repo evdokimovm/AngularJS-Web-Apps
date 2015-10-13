@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> 
+	</head>
+	<body ng-app="GameboardApp">
+		<div class="header">
+			<h1 class="logo">GameBoard</h1>
+		</div>
+
+		<div class="main" ng-controller="ScoreController">
+			<div class="center-block" ng-repeat="score in scores">
+				<game info="score"></game>
+			</div>
+		</div>
+
+	<script src="js/app.js"></script>
+
+	<script src="js/ScoreController.js"></script>
+
+	<script src="js/game.js"></script>
+
+	</body>
+</html>
