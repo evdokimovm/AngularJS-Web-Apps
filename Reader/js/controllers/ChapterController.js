@@ -7,6 +7,10 @@ app.controller('ChapterController', ['$scope', 'books', '$routeParams', function
 		// If there no more chapters left, go back to the bookshelf view
 		if($routeParams.chapterId >= $scope.book.chapters.length - 1) {
 			$scope.nextChapterIndex = "#";
+		} else if ($routeParams.chapterId == "0") {
+			$scope.prevChapterIndex = "#/books/" + $routeParams.bookId;
+		} else {
+			$scope.prevChapterIndex = "#/books/" + $routeParams.bookId + "/chapters/" + ($routeParams.chapterId - 1);
 		}
 
 	});
